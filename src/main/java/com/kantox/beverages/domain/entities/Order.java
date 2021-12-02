@@ -16,7 +16,6 @@ public class Order {
     private Double totalPrice = 0.0;
 
     public void addProduct(final Product product) {
-        if (products == null) products = new ArrayList<>();
         products.add(product);
     }
 }

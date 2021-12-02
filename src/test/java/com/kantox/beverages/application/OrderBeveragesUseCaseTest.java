@@ -108,7 +108,7 @@ class OrderBeveragesUseCaseTest {
         // GIVEN
         Order orderWithAllThePossibleDiscounts = Order.builder().build();
 
-        Product greenTea = new Product(Products.GREEN_TEA.getName(), 2);
+        Product greenTea = new Product(Products.GREEN_TEA.getName(), 1);
         greenTea.setPrice(3.11);
         orderWithAllThePossibleDiscounts.addProduct(greenTea);
 
@@ -129,7 +129,7 @@ class OrderBeveragesUseCaseTest {
         Assertions.assertEquals(0.0, strawberriesProcessed.getDiscount());
         Product coffeesProcessed = getProducts(processedOrder, Products.COFFEE.getName());
         Assertions.assertEquals(22.46, coffeesProcessed.getDiscount());
-        Assertions.assertEquals(39.07, processedOrder.get().getTotalPrice());
+        Assertions.assertEquals(24.34, processedOrder.get().getTotalPrice());
     }
 
     private Product getProducts(final Either<KantoxBeveragesApplicationException, Order> processedOrder,
