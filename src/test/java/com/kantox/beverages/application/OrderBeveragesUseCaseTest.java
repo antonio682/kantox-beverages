@@ -12,8 +12,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class OrderBeveragesUseCaseTest {
-    // STRAWBERRIES 3 O MAS -50 CENTIMOS
-    // 3 CAFES O MAS SBAJAN A 1/3 DE SU PRECIO
 
     @Autowired
     public OrderBeveragesUseCase orderBeveragesUseCase;
